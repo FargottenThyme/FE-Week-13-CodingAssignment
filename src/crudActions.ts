@@ -1,5 +1,5 @@
 import { personnelMap } from "./dataRetrieval"
-import { renderTable } from "./main"
+import { renderTable, matchDepartment, matchPosition } from "./main"
 
 // Data and Types
 type Person = {
@@ -64,10 +64,10 @@ export async function onDeleteEmployeeClick() { // Deletes selectedPerson from t
 export function onButtonUpdateClick() { // Switches button visibility and inserts selected person data into the form
     newPersonBtn.style.display = "none";
     updatePersonBtn.style.display = "initial";
-    firstNameInput = selectedPerson!.firstName
-    lastNameInput = selectedPerson!.lastName
-    departmentInput = selectedPerson!.departmentId
-    positionInput = selectedPerson!.positionId
+    (<HTMLInputElement>document.getElementById("employeeFirstName")).value = selectedPerson!.firstName;
+    (<HTMLInputElement>document.getElementById("employeeLastName")).value = selectedPerson!.lastName;
+    (<HTMLSelectElement>document.getElementById("department")).selectedIndex = (selectedPerson!.departmentId - 1);
+    (<HTMLSelectElement>document.getElementById("position")).selectedIndex = (selectedPerson!.positionId - 1);
 }
 
 export function setSelectedPerson(input:Person|null) { // Sets selectedPerson to the Input

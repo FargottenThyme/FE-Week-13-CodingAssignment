@@ -51,12 +51,12 @@ function renderTableData() {
     console.log("Table Data Successfully Rendered") // Used to show functionality
 }
 
-function matchDepartment(departmentId:number) { // Used to find the new departmentList index
+export function matchDepartment(departmentId:number) { // Used to find the new departmentList index
   let id = departmentId - 1;
   return departmentList[id];
 }
 
-function matchPosition(positionId:number) { // Used to find the new positionList index
+export function matchPosition(positionId:number) { // Used to find the new positionList index
   let id = positionId - 1;
   return positionList[id];
 }
