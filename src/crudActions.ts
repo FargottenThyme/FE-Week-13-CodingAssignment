@@ -77,3 +77,11 @@ export function onButtonUpdateClick() { // Switches button visibility and insert
 export function setSelectedPerson(input:Person|null) { // Sets selectedPerson to the Input
     selectedPerson = input;
 }
+
+newPersonBtn.addEventListener('click', (event) => {
+    onCreateEmployeeClick();
+})
+
+updatePersonBtn.addEventListener('click', (event) => {
+    onUpdateEmployeeClick();
+})
