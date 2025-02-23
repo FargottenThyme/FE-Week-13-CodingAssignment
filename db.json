@@ -1,0 +1,149 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Grocery"
+    },
+    {
+      "id": 2,
+      "name": "Produce"
+    },
+    {
+      "id": 3,
+      "name": "Dairy"
+    },
+    {
+      "id": 4,
+      "name": "Freezer"
+    },
+    {
+      "id": 5,
+      "name": "Meat"
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "name": "Manager"
+    },
+    {
+      "id": 2,
+      "name": "Assistant Manager"
+    },
+    {
+      "id": 3,
+      "name": "Full-Time"
+    },
+    {
+      "id": 4,
+      "name": "Part-Time"
+    }
+  ],
+  "personnel": [
+    {
+      "id": 1,
+      "firstName": "Jarred",
+      "lastName": "Frazier",
+      "departmentId": 1,
+      "positionId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Alice",
+      "lastName": "Kerriker",
+      "departmentId": 2,
+      "positionId": 3
+    },
+    {
+      "id": 3,
+      "firstName": "Jaden",
+      "lastName": "Callus",
+      "departmentId": 3,
+      "positionId": 3
+    },
+    {
+      "id": 4,
+      "firstName": "Frank",
+      "lastName": "Triton",
+      "departmentId": 4,
+      "positionId": 4
+    },
+    {
+      "id": 8,
+      "firstName": "Louis",
+      "lastName": "Hernandez",
+      "departmentId": 5,
+      "positionId": 1
+    },
+    {
+      "id": 9,
+      "firstName": "Shelly",
+      "lastName": "Andrews",
+      "departmentId": 1,
+      "positionId": 2
+    },
+    {
+      "id": 11,
+      "firstName": "Trevor",
+      "lastName": "Johnson",
+      "departmentId": 5,
+      "positionId": 2
+    },
+    {
+      "id": 14,
+      "firstName": "Blake",
+      "lastName": "Greenwood",
+      "departmentId": 1,
+      "positionId": 4
+    },
+    {
+      "id": 22,
+      "firstName": "Connor",
+      "lastName": "Greenwood",
+      "departmentId": 1,
+      "positionId": 4
+    },
+    {
+      "id": 23,
+      "firstName": "Harris",
+      "lastName": "Bloomund",
+      "departmentId": 5,
+      "positionId": 3
+    },
+    {
+      "id": 26,
+      "firstName": "Josephine",
+      "lastName": "Hansen",
+      "departmentId": 2,
+      "positionId": 4
+    },
+    {
+      "id": 31,
+      "firstName": "Luke",
+      "lastName": "Landover",
+      "departmentId": 3,
+      "positionId": 4
+    },
+    {
+      "id": 37,
+      "firstName": "Charlie",
+      "lastName": "Harrison",
+      "departmentId": 1,
+      "positionId": 4
+    },
+    {
+      "id": 43,
+      "firstName": "Corey",
+      "lastName": "Zimmer",
+      "departmentId": 5,
+      "positionId": 4
+    },
+    {
+      "id": 45,
+      "firstName": "John",
+      "lastName": "Doe",
+      "departmentId": 4,
+      "positionId": 3
+    }
+  ]
+}
