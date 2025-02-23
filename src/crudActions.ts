@@ -1,5 +1,5 @@
 import { personnelMap } from "./dataRetrieval"
-import { renderTable, matchDepartment, matchPosition } from "./main"
+import { renderTable, } from "./main"
 
 // Data and Types
 type Person = {
