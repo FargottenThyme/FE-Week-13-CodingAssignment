@@ -11,7 +11,7 @@ type Person = {
 }
 
 export let selectedPerson: Person|null = null; // Used to hold the selected Person object
-let firstNameInput: string | null = (<HTMLInputElement>document.getElementById("employeeFirstName")).value // Used to get the value of the firstName Input
+let firstNameInput: string = (<HTMLInputElement>document.getElementById("employeeFirstName")).value // Used to get the value of the firstName Input
 let lastNameInput: string = (<HTMLInputElement>document.getElementById("employeeLastName")).value // Used to get the value of the lastName Input
 let departmentInput: number = parseInt((<HTMLSelectElement>document.getElementById("department")).value) // Used to get the option value of the department Select
 let positionInput: number = parseInt((<HTMLSelectElement>document.getElementById("position")).value) // Used to get the option value of the position Select
@@ -22,12 +22,8 @@ const updatePersonBtn = <HTMLButtonElement>document.getElementById("updateEmploy
 
 // CRUD Functions
 async function onCreateEmployeeClick() { // Posts selectedPerson to the DB and Table
-    let newFirstName = firstNameInput;
-    let newLastName = lastNameInput;
-    let newDepartment = departmentInput;
-    let newPosition = positionInput;
     let newId = personnelMap.length;
-    const newPerson = { id: newId, firstName: newFirstName, lastName: newLastName, departmentId: newDepartment, positionId: newPosition }
+    const newPerson = { id: newId, firstName: firstNameInput, lastName: lastNameInput, departmentId: departmentInput, positionId: positionInput }
     await fetch("http://localhost:3000/personnel", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -78,10 +74,27 @@ export function setSelectedPerson(input:Person|null) { // Sets selectedPerson to
     selectedPerson = input;
 }
 
+// Event Listeners
 newPersonBtn.addEventListener('click', (event) => {
     onCreateEmployeeClick();
 })
 
 updatePersonBtn.addEventListener('click', (event) => {
     onUpdateEmployeeClick();
+})
+
+document.getElementById("employeeFirstName")?.addEventListener('change', (event) => {
+    firstNameInput = (<HTMLInputElement>document.getElementById("employeeFirstName")).value;
+})
+
+document.getElementById("employeeLastName")?.addEventListener('change', (event) => {
+    lastNameInput = (<HTMLInputElement>document.getElementById("employeeLastName")).value;
+})
+
+document.getElementById("department")?.addEventListener('change', (event) => {
+    departmentInput = parseInt((<HTMLSelectElement>document.getElementById("department")).value);
+})
+
+document.getElementById("position")?.addEventListener('change', (event) => {
+    positionInput = parseInt((<HTMLSelectElement>document.getElementById("position")).value);
 })
